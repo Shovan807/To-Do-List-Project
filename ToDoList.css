@@ -1,0 +1,163 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+  .todo-app h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #ff4b1f, #ff9068, #2575fc, #6a11cb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #2575fc;
+    width: 0;
+    animation: typing 3.5s steps(15) forwards, blink 0.8s step-end infinite alternate, glowPulse 2s ease-in-out infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Blinking cursor */
+@keyframes blink {
+    from { border-color: transparent; }
+    to { border-color: #2575fc; }
+}
+
+/* Neon glow effect */
+@keyframes glowPulse {
+    0% { text-shadow: 0 0 10px #2575fc, 0 0 20px #6a11cb, 0 0 30px #ff9068; }
+    50% { text-shadow: 0 0 20px #6a11cb, 0 0 40px #2575fc, 0 0 60px #ff4b1f; }
+    100% { text-shadow: 0 0 10px #2575fc, 0 0 20px #6a11cb, 0 0 30px #ff9068; }
+}
+
+
+
+    body {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 400px;
+        background: #fff;
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .todo-app h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    #row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #f2f2f2;
+        border-radius: 30px;
+        padding: 10px;
+    }
+
+    #inbtn {
+        border: none;
+        outline: none;
+        background: transparent;
+        flex: 1;
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    #btn {
+        background: #2575fc;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #btn:hover {
+        background: #1a5de3;
+    }
+
+    ul {
+        list-style: none;
+        margin-top: 20px;
+        padding-left: 0;
+    }
+
+    ul li {
+        background: #f9f9f9;
+        padding: 10px 15px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    ul li:hover {
+        background: #e3e3e3;
+    }
+
+    ul li.checked {
+        text-decoration: line-through;
+        color: gray;
+        background: #d4d4d4;
+    }
+ul li {
+    background: #f9f9f9;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between; /* keeps text left, cross right */
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+ul li:hover {
+    background: #e3e3e3;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: gray;
+    background: #d4d4d4;
+}
+
+/* Cross (×) button styling */
+ul li span {
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+    font-size: 22px;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+ul li span:hover {
+    color: darkred;
+}
